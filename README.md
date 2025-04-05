@@ -19,7 +19,7 @@ Este módulo personalizado para Odoo integra la consulta de un servicio externo 
 1. Clonar el repositorio:
    ```
    git clone https://github.com/tu-usuario/movie-management.git
-   cd movie-management
+   cd odoo-peliculas
    ```
 
 2. Iniciar los contenedores con Docker Compose:
