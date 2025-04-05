@@ -1,0 +1,15 @@
+<odoo>
+    <data noupdate="1">
+        <record id="ir_cron_fetch_movie" model="ir.cron">
+            <field name="name">Obtener Película desde API</field>
+            <field name="model_id" ref="model_movie_movie"/>
+            <field name="state">code</field>
+            <field name="code">model.fetch_movie_from_api()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="active" eval="True"/>
+        </record>
+    </data>
+</odoo>

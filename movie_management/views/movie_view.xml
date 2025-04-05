@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Vista de Árbol -->
+    <record id="view_movie_tree" model="ir.ui.view">
+        <field name="name">movie.movie.tree</field>
+        <field name="model">movie.movie</field>
+        <field name="arch" type="xml">
+            <tree string="Películas">
+                <field name="name"/>
+                <field name="ranking"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de Formulario -->
+    <record id="view_movie_form" model="ir.ui.view">
+        <field name="name">movie.movie.form</field>
+        <field name="model">movie.movie</field>
+        <field name="arch" type="xml">
+            <form string="Película">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="ranking"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de Búsqueda -->
+    <record id="view_movie_search" model="ir.ui.view">
+        <field name="name">movie.movie.search</field>
+        <field name="model">movie.movie</field>
+        <field name="arch" type="xml">
+            <search string="Películas">
+                <field name="name"/>
+                <field name="ranking"/>
+                <filter string="Ranking Superior" name="high_ranking" domain="[('ranking','>=', 4.0)]"/>
+                <group expand="0" string="Agrupar Por">
+                    <filter string="Ranking" name="group_by_ranking" context="{'group_by':'ranking'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Acción de Ventana -->
+    <record id="action_movie" model="ir.actions.act_window">
+        <field name="name">Películas</field>
+        <field name="res_model">movie.movie</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_movie_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Añadir una nueva película
+            </p>
+        </field>
+    </record>
+
+    <!-- Elemento de Menú -->
+    <menuitem id="menu_movie_root" name="Gestión de Películas" sequence="10"/>
+    <menuitem id="menu_movie" parent="menu_movie_root" action="action_movie" name="Películas" sequence="1"/>
+
+    <!-- Parámetros del Sistema -->
+    <record id="param_api_url" model="ir.config_parameter">
+        <field name="key">movie_management.api_url</field>
+        <field name="value">https://random-data-api.com/api/v3/projects/a2bebcc5-69e3-4b4e-b8c0-4a2f4306f0da</field>
+    </record>
+    <record id="param_api_key" model="ir.config_parameter">
+        <field name="key">movie_management.api_key</field>
+        <field name="value">ZN-BE0NeUFPRYdYrRZf7CQ</field>
+    </record>
+</odoo>
