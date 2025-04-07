@@ -72,6 +72,7 @@ Este módulo personalizado para Odoo integra la consulta de un servicio externo 
 ## Estructura del Proyecto
 
 ```
+<<<<<<< HEAD
 .gitignore
 │   docker-compose.yml
 │   entrypoint.sh
@@ -109,6 +110,25 @@ Este módulo personalizado para Odoo integra la consulta de un servicio externo 
     │
     └───__pycache__
             __init__.cpython-39.pyc
+=======
+movie_management/
+├── __init__.py                  # Inicialización del módulo
+├── __manifest__.py              # Manifiesto y metadata
+├── controllers/                 # Controladores REST
+│   ├── __init__.py
+│   └── main.py                  # Endpoint de top películas
+├── data/
+│   └── cron.xml                 # Definición del cron job
+├── models/
+│   ├── __init__.py
+│   └── movie.py                 # Modelo de películas
+├── security/
+│   └── ir.model.access.csv      # Reglas de acceso
+└── views/
+    └── movie_view.xml           # Vistas UI y parámetros del sistema
+docker-compose.yml               # Configuración para despliegue
+README.md                        # Archivo .md
+>>>>>>> e2afdf8 (Agrego Comentarios al codigo para entendimiento del orm y como funciona el ambiente odoo)
 ```
 
 ## Desarrollo

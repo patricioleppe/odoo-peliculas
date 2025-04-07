@@ -13,7 +13,11 @@ class MovieController(http.Controller):
         Retorna un JSON con los campos id, título y ranking.
         """
         try:
-            # Buscar las 10 películas con mejor ranking
+            #  # Buscar las 10 películas con mejor ranking
+            # request.env: Accede al entorno de Odoo desde la petición HTTP
+            # ['movie.movie']: Accede al modelo de películas definido anteriormente
+            # sudo(): Ejecuta la consulta con privilegios de administrador (evita restricciones de acceso)
+            # search([]): Busca todos los registros (array vacío = sin condiciones)
             movies = request.env['movie.movie'].sudo().search([], order='ranking desc', limit=10)
             
             # Transformar los resultados a un formato adecuado para JSON

@@ -1,5 +1,5 @@
 {
-    'name': 'Gestión de Películas',
+    'name': 'Gestión de Películas', 
     'version': '1.0',
     'summary': 'Módulo para gestionar películas desde API externa',
     'description': """
