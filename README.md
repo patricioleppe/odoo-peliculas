@@ -72,44 +72,6 @@ Este módulo personalizado para Odoo integra la consulta de un servicio externo 
 ## Estructura del Proyecto
 
 ```
-<<<<<<< HEAD
-.gitignore
-│   docker-compose.yml
-│   entrypoint.sh
-│   movie.py
-│   README.md
-│   
-└───movie_management
-    │   __init__.py
-    │   __manifest__.py
-    │   
-    ├───controllers
-    │   │   main.py
-    │   │   __init__.py
-    │   │   
-    │   └───__pycache__
-    │           main.cpython-39.pyc
-    │           __init__.cpython-39.pyc
-    │
-    ├───data
-    │       cron.xml
-    │
-    ├───models
-    │   │   movie.py
-    │   │   __init__.py
-    │   │
-    │   └───__pycache__
-    │           movie.cpython-39.pyc
-    │           __init__.cpython-39.pyc
-    │
-    ├───security
-    │       ir.model.access.csv
-    │
-    ├───views
-    │       movie_view.xml
-    │
-    └───__pycache__
-            __init__.cpython-39.pyc
 =======
 movie_management/
 ├── __init__.py                  # Inicialización del módulo
@@ -128,7 +90,6 @@ movie_management/
     └── movie_view.xml           # Vistas UI y parámetros del sistema
 docker-compose.yml               # Configuración para despliegue
 README.md                        # Archivo .md
->>>>>>> e2afdf8 (Agrego Comentarios al codigo para entendimiento del orm y como funciona el ambiente odoo)
 ```
 
 ## Desarrollo
